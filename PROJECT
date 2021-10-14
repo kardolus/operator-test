@@ -3,4 +3,14 @@ layout:
 - go.kubebuilder.io/v3
 projectName: operator-test
 repo: github.com/kardolus/operator-test
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: demo.operator-test.io
+  group: elastic
+  kind: MyOperatorTest
+  path: github.com/kardolus/operator-test/api/v1
+  version: v1
 version: "3"

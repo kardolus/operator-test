@@ -1,0 +1,20 @@
+# permissions for end users to view myoperatortests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: myoperatortest-viewer-role
+rules:
+- apiGroups:
+  - elastic.demo.operator-test.io
+  resources:
+  - myoperatortests
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - elastic.demo.operator-test.io
+  resources:
+  - myoperatortests/status
+  verbs:
+  - get

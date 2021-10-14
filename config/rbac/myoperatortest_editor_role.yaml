@@ -1,0 +1,24 @@
+# permissions for end users to edit myoperatortests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: myoperatortest-editor-role
+rules:
+- apiGroups:
+  - elastic.demo.operator-test.io
+  resources:
+  - myoperatortests
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - elastic.demo.operator-test.io
+  resources:
+  - myoperatortests/status
+  verbs:
+  - get

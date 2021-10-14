@@ -1,0 +1,7 @@
+apiVersion: elastic.demo.operator-test.io/v1
+kind: MyOperatorTest
+metadata:
+  name: myoperatortest-sample
+spec:
+  # Add fields here
+  foo: bar
