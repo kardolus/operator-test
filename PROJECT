@@ -1,0 +1,6 @@
+domain: demo.operator-test.io
+layout:
+- go.kubebuilder.io/v3
+projectName: operator-test
+repo: github.com/kardolus/operator-test
+version: "3"
